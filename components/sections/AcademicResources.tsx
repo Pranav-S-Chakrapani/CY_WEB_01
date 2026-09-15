@@ -161,7 +161,7 @@ export function QuickAccess() {
 
   return (
     <section id="quick-access" className="relative overflow-hidden bg-cyber-black px-6 py-24 lg:px-24">
-      <div className="absolute inset-0 pointer-events-none opacity-[0.05] bg-[linear-gradient(120deg,#00f5ff_0%,transparent_34%),linear-gradient(300deg,#ff00ff_0%,transparent_28%)]" />
+      <div className="absolute inset-0 pointer-events-none opacity-[0.04] bg-[linear-gradient(120deg,#3654ff_0%,transparent_34%),linear-gradient(300deg,#7b3fe4_0%,transparent_28%)]" />
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
@@ -188,7 +188,7 @@ export function QuickAccess() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.06 }}
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-cyber-panel/80 p-6 transition-all hover:-translate-y-1 hover:border-neon-cyan/70 hover:shadow-[0_20px_60px_rgba(0,245,255,0.12)] cursor-pointer min-h-[220px] flex flex-col justify-between"
+                  className="group relative overflow-hidden rounded-2xl border border-black/8 bg-white p-6 transition-all hover:-translate-y-1 hover:border-neon-cyan/40 hover:shadow-[0_8px_30px_rgba(54,84,255,0.08)] cursor-pointer min-h-[220px] flex flex-col justify-between"
                 >
                   <div className="mb-4 flex items-center justify-between">
                     <div className="grid h-12 w-12 place-items-center rounded-xl border border-neon-cyan/25 bg-neon-cyan/10 text-neon-cyan">
@@ -211,7 +211,7 @@ export function QuickAccess() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.06 }}
                 onClick={() => openGallery(item.title)}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-cyber-panel/80 min-h-[250px] transition-all hover:-translate-y-1 hover:border-neon-cyan/70 hover:shadow-[0_20px_60px_rgba(0,245,255,0.12)] cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl border border-black/8 bg-white min-h-[250px] transition-all hover:-translate-y-1 hover:border-neon-cyan/40 hover:shadow-[0_8px_30px_rgba(54,84,255,0.08)] cursor-pointer"
               >
                 {/* Background image card */}
                 {hasImage && (
@@ -370,9 +370,9 @@ export function StudentCorner() {
               initial={{ opacity: 0, x: 32 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.08 }}
-              className="flex items-start gap-4 rounded-2xl border border-white/10 bg-cyber-panel/80 p-5"
+              className="flex items-start gap-4 rounded-2xl border border-black/8 bg-white p-5"
             >
-              <div className="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-neon-green/10 text-neon-green">
+              <div className="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#eef1ff] text-neon-cyan">
                 {index + 1}
               </div>
               <p className="text-base leading-relaxed text-text-primary/80">{item}</p>
@@ -446,8 +446,8 @@ export function LearningResources() {
                   transition={{ delay: index * 0.07 }}
                   className={`group text-left block min-h-64 rounded-2xl border p-6 transition-all hover:-translate-y-1 cursor-pointer w-full ${
                     showStudyMaterials
-                      ? "border-neon-magenta bg-neon-magenta/5 shadow-[0_0_30px_rgba(255,0,255,0.15)]"
-                      : "border-white/10 bg-cyber-panel/80 hover:border-neon-magenta/60 hover:shadow-[0_20px_60px_rgba(79,70,229,0.12)]"
+                      ? "border-neon-magenta bg-neon-magenta/5 shadow-[0_4px_20px_rgba(123,63,228,0.10)]"
+                      : "border-black/8 bg-white hover:border-neon-magenta/60 hover:shadow-[0_8px_30px_rgba(99,102,241,0.08)]"
                   }`}
                 >
                   {cardContent}
@@ -465,7 +465,7 @@ export function LearningResources() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.07 }}
-                  className="group block min-h-64 rounded-2xl border border-white/10 bg-cyber-panel/80 p-6 transition-all hover:border-neon-magenta/60 hover:shadow-[0_20px_60px_rgba(79,70,229,0.12)] hover:-translate-y-1 cursor-pointer"
+                  className="group block min-h-64 rounded-2xl border border-black/8 bg-white p-6 transition-all hover:border-neon-magenta/60 hover:shadow-[0_8px_30px_rgba(99,102,241,0.08)] hover:-translate-y-1 cursor-pointer"
                 >
                   {cardContent}
                 </motion.a>
@@ -478,7 +478,7 @@ export function LearningResources() {
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.07 }}
-                className="min-h-64 rounded-2xl border border-white/10 bg-cyber-panel/80 p-6 transition-all hover:border-neon-magenta/60"
+                className="min-h-64 rounded-2xl border border-black/8 bg-white p-6 transition-all hover:border-neon-magenta/60"
               >
                 {cardContent}
               </motion.div>
@@ -495,7 +495,7 @@ export function LearningResources() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="overflow-hidden border border-white/10 bg-cyber-panel/40 backdrop-blur-xl rounded-3xl p-6 lg:p-10 shadow-[0_20px_80px_rgba(0,0,0,0.4)]"
+              className="overflow-hidden border border-black/8 bg-white rounded-3xl p-6 lg:p-10 shadow-sm"
             >
               <div className="flex flex-col gap-8">
                 {/* Header */}
@@ -506,15 +506,15 @@ export function LearningResources() {
                 </div>
 
                 {/* Semester Selector Grid */}
-                <div className="grid grid-cols-4 sm:grid-cols-8 gap-2 border-b border-white/10 pb-6">
+                <div className="grid grid-cols-4 sm:grid-cols-8 gap-2 border-b border-black/6 pb-6">
                   {semesters.map((sem) => (
                     <button
                       key={sem}
                       onClick={() => setSelectedSemester(sem)}
                       className={`py-3 px-1 rounded-xl text-sm font-bold font-orbitron transition-all border ${
                         selectedSemester === sem
-                          ? "bg-neon-magenta text-white border-neon-magenta shadow-[0_0_15px_rgba(255,0,255,0.3)] scale-[1.03]"
-                          : "bg-cyber-black/40 text-text-muted border-white/5 hover:border-neon-magenta/40 hover:text-text-primary"
+                          ? "bg-neon-magenta text-white border-neon-magenta shadow-[0_4px_12px_rgba(123,63,228,0.18)] scale-[1.03]"
+                          : "bg-white text-text-muted border-black/8 hover:border-neon-magenta/40 hover:text-text-primary"
                       }`}
                     >
                       Sem {sem}
@@ -534,7 +534,7 @@ export function LearningResources() {
                     {schemes.map((scheme, idx) => (
                       <div
                         key={scheme.name}
-                        className="flex flex-col justify-between p-5 rounded-2xl border border-white/10 bg-cyber-black/30 min-h-[220px] transition-all hover:border-white/20"
+                        className="flex flex-col justify-between p-5 rounded-2xl border border-black/8 bg-white min-h-[220px] transition-all hover:border-black/16"
                       >
                         <div>
                           <div className="flex items-center gap-2 mb-3">
@@ -545,7 +545,7 @@ export function LearningResources() {
                         <div className="flex flex-col gap-2">
                           <button
                             onClick={() => alert(`Accessing Semester ${selectedSemester} - ${scheme.name} syllabus resources.`)}
-                            className="flex items-center justify-between px-4 py-2.5 rounded-xl border border-white/10 text-xs font-bold text-text-primary bg-cyber-panel/60 hover:bg-white/5 transition-all w-full cursor-pointer"
+                            className="flex items-center justify-between px-4 py-2.5 rounded-xl border border-black/8 text-xs font-bold text-text-primary bg-white hover:bg-cyber-dark transition-all w-full cursor-pointer"
                           >
                             <span className="flex items-center gap-2">
                               <FileDown size={14} className="text-neon-magenta" /> Syllabus Structure
@@ -554,7 +554,7 @@ export function LearningResources() {
                           </button>
                           <button
                             onClick={() => alert(`Accessing Semester ${selectedSemester} - ${scheme.name} notes & lecture materials.`)}
-                            className="flex items-center justify-between px-4 py-2.5 rounded-xl border border-white/10 text-xs font-bold text-text-primary bg-cyber-panel/60 hover:bg-white/5 transition-all w-full cursor-pointer"
+                            className="flex items-center justify-between px-4 py-2.5 rounded-xl border border-black/8 text-xs font-bold text-text-primary bg-white hover:bg-cyber-dark transition-all w-full cursor-pointer"
                           >
                             <span className="flex items-center gap-2">
                               <FolderDown size={14} className="text-neon-cyan" /> Lecture Notes
@@ -574,3 +574,4 @@ export function LearningResources() {
     </section>
   );
 }
+

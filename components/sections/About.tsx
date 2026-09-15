@@ -47,12 +47,12 @@ export default function About() {
   return (
     <SectionAtmosphere id="about" variant="neutral" className="py-24 px-6 lg:px-24">
       <div ref={containerRef}>
-      {/* Binary Rain Background (Temporary) */}
+      {/* Binary Rain Background — color resolves to on-brand indigo via --neon-cyan token */}
       {binaryRain && mounted && (
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-20 flex justify-around overflow-hidden">
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.07] flex justify-around overflow-hidden">
           {binaryColumns.map((column, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className="text-neon-cyan font-mono text-xs break-all animate-matrix-fall"
               style={{ animationDelay: column.delay }}
             >
@@ -62,16 +62,30 @@ export default function About() {
         </div>
       )}
 
-      <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center">
-        {/* Text Content */}
+      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-16 lg:gap-24 items-center">
+
+        {/* ── Left column: text content ─────────────────────────────────── */}
         <div>
-          <SectionHeading className="[&_.scroll-title-inner]:text-neon-cyan">
-            <span className="flex items-center justify-center gap-4">
-              <Info size={40} className="text-neon-cyan" /> About the Department
+          {/* Eyebrow — font-mono, indigo, sentence case */}
+          <p className="font-mono text-xs tracking-[0.22em] text-neon-cyan mb-4 uppercase">
+            About the department
+          </p>
+
+          <SectionHeading
+            align="left"
+            animated={false}
+            className="!mb-8 text-text-primary"
+          >
+            <span className="flex items-center gap-4">
+              <Info size={36} className="text-neon-cyan shrink-0" />
+              About the Department
             </span>
           </SectionHeading>
 
-          <ScrollReveal variant="blur" className="space-y-6 font-share-tech text-lg leading-relaxed text-text-primary/70 md:text-2xl">
+          <ScrollReveal
+            variant="blur"
+            className="space-y-5 text-base md:text-lg leading-relaxed text-text-muted"
+          >
             <p>
               The Department of CS-Cybersecurity and the Department of CS-Information Security at GM University is at the forefront of network analytics, network security, and topologies, dedicated to advancing the field of cybersecurity through innovative research and quality education. Established in 2024, our department has quickly become a center of excellence for cybersecurity education and research.
             </p>
@@ -80,18 +94,56 @@ export default function About() {
             </p>
           </ScrollReveal>
 
-          <div className="mt-12 flex flex-wrap justify-center gap-3" data-stagger>
+          {/* Feature tags — clean bordered mono pills */}
+          <div className="mt-10 flex flex-wrap gap-3" data-stagger>
             {featureTags.map((tag) => (
               <div
                 key={tag}
                 data-stagger-item
-                className="cursor-crosshair rounded-full border border-neon-cyan/30 bg-neon-cyan/10 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-neon-cyan transition-all hover:bg-neon-cyan/20 md:text-sm"
+                className="rounded-full border border-black/12 bg-white px-4 py-1.5 font-mono text-[11px] tracking-widest text-text-muted transition-all hover:border-neon-cyan/50 hover:text-neon-cyan md:text-xs"
               >
                 {tag}
               </div>
             ))}
           </div>
         </div>
+
+        {/* ── Right column: scanner-frame stat panel ───────────────────── */}
+        <div className="relative border border-black/10 bg-white rounded-2xl p-8">
+          {/* L-bracket corner accents — top-left */}
+          <span
+            aria-hidden
+            className="pointer-events-none absolute top-3 left-3 block h-[18px] w-[18px]"
+            style={{
+              borderTop: "2px solid #3654ff",
+              borderLeft: "2px solid #3654ff",
+            }}
+          />
+          {/* L-bracket corner accents — bottom-right */}
+          <span
+            aria-hidden
+            className="pointer-events-none absolute bottom-3 right-3 block h-[18px] w-[18px]"
+            style={{
+              borderBottom: "2px solid #3654ff",
+              borderRight: "2px solid #3654ff",
+            }}
+          />
+
+          <div className="grid grid-cols-2 gap-6">
+            {stats.map((stat) => (
+              <div key={stat.label} className="flex flex-col gap-1">
+                <span className="font-orbitron font-bold text-3xl md:text-4xl text-text-primary leading-none">
+                  {stat.value}
+                </span>
+                <span className="font-mono text-[11px] tracking-widest text-text-muted uppercase">
+                  {stat.sub}
+                </span>
+                <span className="mt-1 h-px w-8 bg-neon-cyan/30" />
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
 
       <style jsx>{`

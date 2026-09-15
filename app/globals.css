@@ -2,40 +2,57 @@
 @import "lenis/dist/lenis.css";
 
 @theme {
-  --font-share-tech: var(--font-body), system-ui, sans-serif;
-  --font-orbitron: 'Orbitron', sans-serif;
+  /* --- Font tokens ---------------------------------------------------------
+     --font-orbitron   -> Space Grotesk  (display / headings)
+     --font-share-tech -> Inter          (body / prose)
+     --font-mono       -> JetBrains Mono (badges, tags, ticker, subline)
+     NOTE: variable NAMES are kept so downstream font-* classes need zero changes.
+  ---------------------------------------------------------------------------- */
+  --font-orbitron:   var(--font-orbitron), 'Space Grotesk', system-ui, sans-serif;
+  --font-share-tech: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-mono:       var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
 
-  /* Well-lit, professional neutral palette */
-  --color-cyber-black: #ffffff;
-  --color-cyber-dark: #f8fafc;
-  --color-cyber-panel: #f1f5f9;
-  
-  /* Professional accent colors */
-  --color-neon-cyan: #0284c7;
-  --color-neon-magenta: #4f46e5;
-  --color-neon-green: #059669;
-  --color-neon-purple: #6366f1;
-  --color-neon-orange: #ea580c;
-  
-  /* Dark text for light backgrounds */
-  --color-text-primary: #0f172a;
-  --color-text-muted: #475569;
+  /* --- Light-modern palette ------------------------------------------------
+     Token NAMES are preserved so bg-cyber-black, text-neon-cyan, etc.
+     continue to resolve without any component changes.
+  ---------------------------------------------------------------------------- */
+
+  /* Surfaces */
+  --color-cyber-black:    #fbfbfd;
+  --color-cyber-dark:     #f3f5fb;
+  --color-cyber-panel:    #ffffff;
+
+  /* Accents */
+  --color-neon-cyan:      #3654ff;
+  --color-neon-magenta:   #7b3fe4;
+  --color-neon-green:     #00b89c;
+  --color-neon-purple:    #6366f1;
+  --color-neon-orange:    #ea580c;
+
+  /* Text */
+  --color-text-primary:   #0c1222;
+  --color-text-muted:     #4b5563;
 }
 
 :root {
-  --cyber-black: #ffffff;
-  --cyber-dark: #f8fafc;
-  --cyber-panel: #f1f5f9;
-  --neon-cyan: #0284c7;
-  --neon-magenta: #4f46e5;
-  --neon-green: #059669;
-  --neon-purple: #6366f1;
-  --neon-orange: #ea580c;
-  --grid-line: rgba(15, 23, 42, 0.04);
-  --glow-cyan: none;
-  --glow-magenta: none;
-  --text-primary: #0f172a;
-  --text-muted: #475569;
+  --cyber-black:   #fbfbfd;
+  --cyber-dark:    #f3f5fb;
+  --cyber-panel:   #ffffff;
+
+  --neon-cyan:     #3654ff;
+  --neon-magenta:  #7b3fe4;
+  --neon-green:    #00b89c;
+  --neon-purple:   #6366f1;
+  --neon-orange:   #ea580c;
+
+  --grid-line:     rgba(12, 18, 34, 0.035);
+
+  --glow-cyan:     none;
+  --glow-magenta:  none;
+
+  --text-primary:  #0c1222;
+  --text-muted:    #4b5563;
+  --text-label:    #8b94a3;
 }
 
 @layer base {
@@ -45,7 +62,7 @@
   }
 
   html {
-    font-size: 16px; /* Standard base scale */
+    font-size: 16px;
   }
 
   body {
@@ -53,47 +70,52 @@
     font-size: 1rem;
     line-height: 1.65;
     background:
-      radial-gradient(circle at 12% 8%, rgba(2, 132, 199, 0.05), transparent 28rem),
-      radial-gradient(circle at 88% 18%, rgba(79, 70, 229, 0.04), transparent 26rem),
-      #ffffff;
-    /* Custom sleek black cursor with white outline */
+      radial-gradient(circle at 12% 8%,  rgba(54, 84, 255, 0.045), transparent 28rem),
+      radial-gradient(circle at 88% 18%, rgba(123, 63, 228, 0.03),  transparent 26rem),
+      #fbfbfd;
     cursor: url('data:image/svg+xml;utf8,<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 2L18 9L12 11L9 18L4 2Z" fill="black" stroke="white" stroke-width="2" stroke-linejoin="round"/></svg>') 4 2, auto;
   }
-  
+
   a, button, [role="button"], input, select, textarea {
     cursor: url('data:image/svg+xml;utf8,<svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 2C9 1 10 1 11 2L12 7C13 7 14 7 15 8L18 13C19 15 17 18 14 18H9C5 18 4 15 5 12L8 5C9 4 10 4 10 5Z" fill="black" stroke="white" stroke-width="2" stroke-linejoin="round"/></svg>') 9 2, pointer !important;
   }
 
+  :focus-visible {
+    outline: 2px solid var(--neon-cyan);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-orbitron tracking-wider;
+    color: var(--text-primary);
   }
 }
 
 @layer utilities {
-  .glow-text-cyan {
-    text-shadow: none;
-  }
-  .glow-text-magenta {
-    text-shadow: none;
-  }
+  .glow-text-cyan    { text-shadow: none; }
+  .glow-text-magenta { text-shadow: none; }
+
   .neon-border {
-    border: 1px solid rgba(15, 23, 42, 0.1);
+    border: 1px solid rgba(12, 18, 34, 0.1);
     transition: all 0.3s ease;
   }
   .neon-border:hover {
     border-color: var(--neon-cyan);
-    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.1);
+    box-shadow: 0 4px 12px rgba(54, 84, 255, 0.12);
   }
+
   .crt-lines {
     background: repeating-linear-gradient(
-      rgba(0, 0, 0, 0.15) 0px,
-      rgba(0, 0, 0, 0.15) 1px,
+      rgba(12, 18, 34, 0.06) 0px,
+      rgba(12, 18, 34, 0.06) 1px,
       transparent 1px,
       transparent 2px
     );
     pointer-events: none;
     z-index: 100;
   }
+
   .scanline-sweep {
     position: fixed;
     top: -100%;
@@ -103,7 +125,7 @@
     background: linear-gradient(
       to bottom,
       transparent,
-      rgba(0, 245, 255, 0.2),
+      rgba(54, 84, 255, 0.06),
       transparent
     );
     animation: sweep 6s linear infinite;
@@ -112,8 +134,8 @@
   }
 
   @keyframes sweep {
-    0% { top: -100%; }
-    100% { top: 100%; }
+    0%   { top: -100%; }
+    100% { top: 100%;  }
   }
 
   .glitch-text {
@@ -129,35 +151,67 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.8;
+    opacity: 0.55;
   }
 
   .glitch-text::before {
-    color: #ff00ff;
+    color: #7b3fe4;
     z-index: -1;
     animation: glitch-anim-1 4s infinite linear alternate-reverse;
   }
 
   .glitch-text::after {
-    color: #00f5ff;
+    color: #00b89c;
     z-index: -2;
     animation: glitch-anim-2 4s infinite linear alternate-reverse;
   }
 
   @keyframes glitch-anim-1 {
-    0% { clip-path: inset(20% 0 30% 0); transform: translate(-2px, -2px); }
-    10% { clip-path: inset(60% 0 10% 0); transform: translate(2px, 2px); }
-    20% { clip-path: inset(10% 0 70% 0); transform: translate(-2px, 2px); }
-    30% { clip-path: inset(40% 0 40% 0); transform: translate(2px, -2px); }
+    0%   { clip-path: inset(20% 0 30% 0); transform: translate(-2px, -2px); }
+    10%  { clip-path: inset(60% 0 10% 0); transform: translate( 2px,  2px); }
+    20%  { clip-path: inset(10% 0 70% 0); transform: translate(-2px,  2px); }
+    30%  { clip-path: inset(40% 0 40% 0); transform: translate( 2px, -2px); }
     100% { clip-path: inset(20% 0 30% 0); transform: translate(-2px, -2px); }
   }
 
   @keyframes glitch-anim-2 {
-    0% { clip-path: inset(10% 0 80% 0); transform: translate(2px, 2px); }
-    10% { clip-path: inset(40% 0 20% 0); transform: translate(-2px, -2px); }
-    20% { clip-path: inset(70% 0 10% 0); transform: translate(2px, -2px); }
-    30% { clip-path: inset(20% 0 50% 0); transform: translate(-2px, 2px); }
-    100% { clip-path: inset(10% 0 80% 0); transform: translate(2px, 2px); }
+    0%   { clip-path: inset(10% 0 80% 0); transform: translate( 2px,  2px); }
+    10%  { clip-path: inset(40% 0 20% 0); transform: translate(-2px, -2px); }
+    20%  { clip-path: inset(70% 0 10% 0); transform: translate( 2px, -2px); }
+    30%  { clip-path: inset(20% 0 50% 0); transform: translate(-2px,  2px); }
+    100% { clip-path: inset(10% 0 80% 0); transform: translate( 2px,  2px); }
+  }
+
+  .grid-texture {
+    background-image:
+      linear-gradient(to right,  var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 42px 42px;
+  }
+
+  /* ── Spotlight card — cursor-tracked radial gradient on hover ────────────
+     Usage: add class="spotlight-card" + onMouseMove/onMouseLeave handlers
+     that set --sx / --sy CSS custom properties on the element.            */
+  .spotlight-card {
+    position: relative;
+  }
+  .spotlight-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      240px circle at var(--sx, 50%) var(--sy, 50%),
+      rgba(54, 84, 255, 0.08),
+      transparent 65%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .spotlight-card:hover::before {
+    opacity: 1;
   }
 }
 
@@ -183,7 +237,6 @@ canvas {
   }
 }
 
-/* Scroll-driven 3D & reveal helpers */
 [data-scroll-tilt] {
   transform-style: preserve-3d;
   will-change: transform;
@@ -201,7 +254,10 @@ canvas {
   .scroll-label,
   .scroll-section-glow,
   .scroll-float-shape,
-  .section-atmosphere-blob {
+  .section-atmosphere-blob,
+  .scanline-sweep,
+  .glitch-text::before,
+  .glitch-text::after {
     animation: none !important;
     transition: none !important;
   }

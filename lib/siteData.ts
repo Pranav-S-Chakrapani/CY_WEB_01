@@ -55,11 +55,20 @@ export const galleryImages = [
 
 export const faculty = [
   {
-    name: "Dr. Aruna Kumar B T",
-    role: "Associate Professor & HOD",
-    focus: "Cyber defense leadership, secure systems, and department mentoring.",
+    name: "Mrs. Nayana K",
+    role: "HOD",
+    focus: "Department leadership, academic administration, and student mentoring.",
     signal: "HOD_NODE",
-    tags: ["Cyber Defense", "Security Strategy", "Mentoring"],
+    tags: ["Leadership", "Cyber Defense", "Mentoring"],
+    photo: "/cyberweb/nayana.png",
+    cv: "/cyberweb/nayana.pdf",
+  },
+  {
+    name: "Dr. Aruna Kumar B T",
+    role: "Associate Professor & Placement Officer",
+    focus: "Placement coordination, cyber defense leadership, secure systems, and career mentoring.",
+    signal: "FACULTY_NODE",
+    tags: ["Placement", "Associate Professor", "Security Strategy"],
     photo: "https://res.cloudinary.com/dkg60zkba/image/upload/v1774188001/faculty/nmr2zfqaftglonhpsiuy.jpg",
     cv: "/cyberweb/arun.pdf",
   },

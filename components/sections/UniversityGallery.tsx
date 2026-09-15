@@ -8,7 +8,7 @@ import { universityVideos } from "@/lib/siteData";
 export default function UniversityGallery() {
   return (
     <section id="university-gallery" className="relative overflow-hidden bg-cyber-black px-6 py-24 lg:px-24">
-      <div className="absolute inset-0 pointer-events-none opacity-[0.05] bg-[radial-gradient(circle_at_20%_20%,#ff00ff,transparent_28%),radial-gradient(circle_at_80%_0%,#00f5ff,transparent_30%)]" />
+      <div className="absolute inset-0 pointer-events-none opacity-[0.04] bg-[radial-gradient(circle_at_20%_20%,#7b3fe4,transparent_28%),radial-gradient(circle_at_80%_0%,#3654ff,transparent_30%)]" />
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mb-12 grid gap-6 lg:grid-cols-[1fr_420px] lg:items-end">
           <div>
@@ -76,3 +76,4 @@ export default function UniversityGallery() {
     </section>
   );
 }
+

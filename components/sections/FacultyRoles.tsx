@@ -5,11 +5,19 @@ import { ShieldCheck, Star, LayoutList } from "lucide-react";
 
 export const facultyRolesData = [
   {
+    name: "Mrs. NAYANA K",
+    designation: "HOD",
+    sub: "Dept. of CY & IY, GM University",
+    photo: "/cyberweb/nayana.png",
+    roleInDept: "HOD, Disciplinary & Anti Ragging Committee",
+    additionalResponsibility: "Academic Administration & Dept. Coordination"
+  },
+  {
     name: "Dr. ARUNA KUMAR B T",
-    designation: "Associate Professor & HOD",
+    designation: "Associate Professor",
     sub: "Dept. of CY & IY, GM University",
     photo: "https://res.cloudinary.com/dkg60zkba/image/upload/v1774188001/faculty/nmr2zfqaftglonhpsiuy.jpg",
-    roleInDept: "HOD, Disciplinary & Anti Ragging Committee",
+    roleInDept: "Placement Officer",
     additionalResponsibility: "Dept. Website, MOUs & Hackathon"
   },
   {
@@ -104,7 +112,7 @@ export const facultyRolesData = [
 
 export default function FacultyRoles() {
   return (
-    <section id="faculty-roles" className="py-24 px-6 lg:px-16 bg-slate-50 border-t border-slate-200 overflow-hidden">
+    <section id="faculty-roles" className="py-24 px-6 lg:px-16 bg-cyber-black border-t border-black/6 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center mb-16">
           <p className="text-sm font-bold uppercase tracking-widest text-text-muted mb-2">Department Structure</p>
@@ -114,18 +122,18 @@ export default function FacultyRoles() {
           </h2>
         </div>
 
-        <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-200 overflow-hidden">
+        <div className="bg-white rounded-3xl border border-black/8 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-slate-100 border-b border-slate-200 text-sm md:text-base font-orbitron text-text-primary uppercase tracking-wider">
+                <tr className="bg-cyber-dark border-b border-black/6 text-sm md:text-base font-orbitron text-text-primary uppercase tracking-wider">
                   <th className="py-4 px-3 font-bold w-12 text-center whitespace-nowrap">Sl.</th>
                   <th className="py-4 px-4 font-bold w-[30%]">Staff Name & Photo</th>
                   <th className="py-4 px-4 font-bold w-[25%]">Role in Dept.</th>
                   <th className="py-4 px-4 font-bold w-[45%]">Additional Responsibility</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-black/4">
                 {facultyRolesData.map((staff, idx) => (
                   <motion.tr 
                     key={staff.name}
@@ -133,22 +141,22 @@ export default function FacultyRoles() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: idx * 0.05 }}
                     viewport={{ once: true }}
-                    className="hover:bg-slate-50/80 transition-colors group"
+                    className="hover:bg-cyber-dark/60 transition-colors group"
                   >
-                    <td className="py-4 px-3 text-center font-bold text-slate-400 text-sm">
+                    <td className="py-4 px-3 text-center">
                       {idx + 1}
                     </td>
                     <td className="py-4 px-4">
                       <div className="flex items-center gap-3">
-                        <div className="relative w-12 h-12 rounded-full p-[2px] bg-gradient-to-tr from-blue-700 via-blue-500 to-cyan-400 shrink-0 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-all duration-300">
+                        <div className="relative w-12 h-12 rounded-full p-[2px] bg-[#eef1ff] shrink-0 transition-all duration-300">
                           <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white bg-white">
                             <img src={staff.photo} alt={staff.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                           </div>
                         </div>
                         <div className="min-w-0">
-                          <div className="font-bold text-slate-800 text-sm md:text-base whitespace-nowrap">{staff.name}</div>
-                          <div className="text-xs text-sky-600 font-medium tracking-wide whitespace-nowrap">{staff.designation}</div>
-                          <div className="text-xs text-slate-400 whitespace-nowrap">{staff.sub}</div>
+                          <div className="font-bold text-text-primary text-sm md:text-base whitespace-nowrap">{staff.name}</div>
+                          <div className="text-xs text-neon-cyan font-medium tracking-wide whitespace-nowrap">{staff.designation}</div>
+                          <div className="text-xs text-text-muted whitespace-nowrap">{staff.sub}</div>
                         </div>
                       </div>
                     </td>
@@ -174,3 +182,4 @@ export default function FacultyRoles() {
     </section>
   );
 }
+

@@ -22,9 +22,9 @@ export default function Achievements() {
                 data-scroll-tilt
                 className="w-[320px] shrink-0 snap-center md:w-[420px]"
               >
-                <div className="group relative h-full overflow-hidden rounded-3xl border border-white/5 bg-cyber-panel p-6">
+                <div className="group relative h-full overflow-hidden rounded-2xl border border-black/8 bg-white p-6">
                   <div
-                    className={`absolute top-4 right-4 z-20 flex items-center gap-2 rounded-full border border-white/10 bg-cyber-black/80 px-3 py-1 ${rankClass(item.rank)}`}
+                    className={`absolute top-4 right-4 z-20 flex items-center gap-2 rounded-full border border-white/10 bg-white px-3 py-1 ${rankClass(item.rank)}`}
                   >
                     <Trophy size={14} />
                     <span className="text-[10px] font-bold tracking-tighter uppercase">
@@ -32,7 +32,7 @@ export default function Achievements() {
                     </span>
                   </div>
 
-                  <div className="relative mb-6 aspect-video overflow-hidden rounded-xl border border-white/10 transition-all group-hover:border-neon-cyan/50">
+                  <div className="relative mb-6 aspect-video overflow-hidden rounded-xl border border-black/8 transition-all group-hover:border-neon-cyan/40">
                     <Image
                       src={item.photo}
                       alt={item.title}
@@ -43,7 +43,7 @@ export default function Achievements() {
                     <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent opacity-60" />
                   </div>
 
-                  <h3 className="mb-3 text-lg font-orbitron font-bold text-text-primary transition-colors group-hover:text-neon-green">
+                  <h3 className="mb-3 text-lg font-orbitron font-bold text-text-primary transition-colors group-hover:text-neon-cyan">
                     {item.title}
                   </h3>
                   <p className="mb-6 line-clamp-4 font-share-tech text-sm text-text-muted">
@@ -51,7 +51,7 @@ export default function Achievements() {
                   </p>
 
                   <div className="flex items-center gap-2 font-mono text-[10px] text-neon-cyan/80">
-                    <span className="rounded border border-neon-cyan/30 px-2 py-0.5">
+                    <span className="rounded border border-neon-cyan/25 px-2 py-0.5">
                       Student: {item.student}
                     </span>
                   </div>
@@ -68,12 +68,12 @@ export default function Achievements() {
         <div
           data-reveal="blur"
           data-reveal-delay="0.15"
-          className="mt-12 rounded-2xl border border-dashed border-neon-cyan/20 bg-cyber-panel/30 p-8 text-center"
+          className="mt-12 rounded-2xl border border-dashed border-neon-cyan/20 bg-cyber-dark/60 p-8 text-center"
         >
           <p className="text-sm text-text-muted md:text-base">
             More student achievements and recognitions will be added soon.
           </p>
-          <div className="mx-auto mt-4 h-1 w-48 overflow-hidden bg-cyber-black">
+          <div className="mx-auto mt-4 h-1 w-48 overflow-hidden bg-black/8">
             <div className="h-full animate-loading-infinite bg-neon-cyan" />
           </div>
         </div>
@@ -108,7 +108,8 @@ export default function Achievements() {
 }
 
 function rankClass(rank: string) {
-  if (rank.includes("1ST")) return "text-yellow-400 shadow-[0_0_20px_rgba(250,204,21,0.3)]";
-  if (rank.includes("2ND")) return "text-slate-300 shadow-[0_0_20px_rgba(203,213,225,0.3)]";
-  return "text-orange-400 shadow-[0_0_20px_rgba(251,146,60,0.3)]";
+  if (rank.includes("1ST")) return "text-yellow-600";
+  if (rank.includes("2ND")) return "text-text-muted";
+  return "text-orange-500";
 }
+

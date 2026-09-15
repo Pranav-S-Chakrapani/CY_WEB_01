@@ -60,7 +60,7 @@ export default function Gallery() {
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   className="absolute w-[300px] md:w-[500px] h-[200px] md:h-[350px] cursor-pointer"
                 >
-                  <div className="relative w-full h-full group overflow-hidden rounded-xl border border-neon-cyan/30 bg-cyber-panel shadow-[0_0_20px_rgba(0,245,255,0.1)]">
+                  <div className="relative w-full h-full group overflow-hidden rounded-xl border border-black/8 bg-white">
                     <Image 
                       src={img.url} 
                       alt={img.title} 
@@ -90,7 +90,7 @@ export default function Gallery() {
                     </div>
 
                     {/* Scanline Sweep on Hover */}
-                    <div className="absolute top-0 left-0 w-full h-1 bg-neon-cyan/50 shadow-[0_0_10px_#00f5ff] -translate-y-full group-hover:animate-scan-vertical pointer-events-none" />
+                    <div className="absolute top-0 left-0 w-full h-1 bg-neon-cyan/50  -translate-y-full group-hover:animate-scan-vertical pointer-events-none" />
                   </div>
                 </motion.div>
               );
@@ -141,3 +141,4 @@ function Typewriter({ text }: { text: string }) {
 
   return <span>{display}</span>;
 }
+

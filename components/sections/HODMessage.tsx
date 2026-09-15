@@ -14,7 +14,7 @@ export default function HODMessage() {
       <div className="max-w-[1400px] mx-auto flex flex-col gap-12 lg:gap-16 items-center relative z-10">
 
         {/* Left Column: HOD Message Container */}
-        <div className="w-full bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 p-8 md:p-10 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
+        <div className="w-full bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-black/6 p-8 md:p-10 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
           
           {/* HOD Photo & Metadata */}
           <div className="relative flex flex-col items-center flex-shrink-0">
@@ -27,8 +27,8 @@ export default function HODMessage() {
 
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-[0_10px_30px_rgba(2,132,199,0.15)] bg-slate-50">
                 <Image
-                  src="https://cy-iy.vercel.app/static/arun_bt.jpeg"
-                  alt="Dr. Aruna Kumar B T"
+                  src="/cyberweb/nayana.png"
+                  alt="Mrs. Nayana K"
                   fill
                   className="object-cover transition-all duration-500 hover:scale-105"
                   sizes="(max-w-768px) 192px, 224px"
@@ -36,27 +36,27 @@ export default function HODMessage() {
 
                 {/* Holographic Scan Effect */}
                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-                  <div className="absolute top-[-100%] left-0 w-full h-4 bg-neon-cyan/30 shadow-[0_0_15px_#0284c7] animate-hologram-scan" />
+                  <div className="absolute top-[-100%] left-0 w-full h-4 bg-neon-cyan/15 animate-hologram-scan" />
                 </div>
               </div>
             </div>
 
             {/* Signature & Info Block directly under the photo */}
             <div className="text-center mt-6">
-              <h4 className="font-orbitron font-bold text-slate-800 text-xl md:text-2xl">Dr. Aruna Kumar B T</h4>
-              <p className="text-sm md:text-base text-sky-600 font-bold uppercase tracking-wider mt-1.5">Associate Professor &amp; HOD</p>
-              <p className="text-base md:text-lg text-slate-500 font-semibold tracking-wide mt-2">Dept. of CY &amp; IY</p>
+              <h4 className="font-orbitron font-bold text-text-primary text-xl md:text-2xl">Mrs. Nayana K</h4>
+              <p className="text-sm md:text-base text-sky-600 font-bold uppercase tracking-wider mt-1.5">HOD</p>
+              <p className="text-base md:text-lg text-text-muted font-semibold tracking-wide mt-2">Dept. of CY &amp; IY</p>
             </div>
           </div>
 
           {/* HOD Text Content */}
           <div className="flex-1 min-w-0">
-            <h2 className="text-3xl md:text-4xl font-orbitron font-bold mb-6 text-slate-800 flex items-center gap-3 justify-center md:justify-start">
+            <h2 className="text-3xl md:text-4xl font-orbitron font-bold mb-6 text-text-primary flex items-center gap-3 justify-center md:justify-start">
               <MessageSquare size={32} className="text-sky-600 shrink-0" />
               <span>Message from <span className="text-sky-600">HOD</span></span>
             </h2>
 
-            <div className="space-y-4 font-share-tech text-slate-600 leading-relaxed text-sm md:text-base text-justify">
+            <div className="space-y-4 font-share-tech text-text-muted leading-relaxed text-sm md:text-base text-justify">
               <p>
                 Welcome to the Department of Cyber Security &amp; Information Security. Our mission is to provide excellence in education, research, and innovation in cybersecurity. We are committed to nurturing the next generation of cybersecurity professionals who will protect and secure our digital future.
               </p>
@@ -79,7 +79,7 @@ export default function HODMessage() {
 
         {/* Campus Video Container (Below HOD Message) */}
         <div className="w-full max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100 p-8 flex flex-col relative overflow-hidden group">
+          <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-black/6 p-8 flex flex-col relative overflow-hidden group">
 
             {/* Header info */}
             <div className="mb-6">
@@ -87,11 +87,11 @@ export default function HODMessage() {
                 <span className="w-2 h-2 rounded-full bg-sky-500 animate-ping" />
                 Featured Broadcast
               </span>
-              <h3 className="text-2xl md:text-3xl font-orbitron font-bold text-slate-800 mt-2 flex items-center gap-3">
+              <h3 className="text-2xl md:text-3xl font-orbitron font-bold text-text-primary mt-2 flex items-center gap-3">
                 <Video size={28} className="text-sky-600 shrink-0" />
                 <span>Campus <span className="text-sky-600">Video</span></span>
               </h3>
-              <p className="text-slate-500 text-xs md:text-sm mt-2 leading-relaxed font-share-tech">
+              <p className="text-text-muted text-xs md:text-sm mt-2 leading-relaxed font-share-tech">
                 Take an immersive look at our advanced labs, smart campus, student life, and next-generation innovation infrastructure at GM University.
               </p>
             </div>
@@ -113,32 +113,32 @@ export default function HODMessage() {
 
               {/* Hologram sweep animation on container */}
               <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-                <div className="absolute top-[-100%] left-0 w-full h-8 bg-sky-500/10 shadow-[0_0_20px_rgba(2,132,199,0.2)] animate-hologram-scan" />
+                <div className="absolute top-[-100%] left-0 w-full h-8 bg-neon-cyan/8 animate-hologram-scan" />
               </div>
 
               {/* Pulsing Play Button */}
               <div className="relative z-10 flex flex-col items-center gap-4">
-                <div className="w-16 h-16 rounded-full bg-sky-600/90 text-white flex items-center justify-center shadow-[0_0_20px_rgba(2,132,199,0.4)] group-hover/video:bg-sky-500 group-hover/video:scale-110 group-hover/video:shadow-[0_0_30px_rgba(2,132,199,0.6)] transition-all duration-300">
+                <div className="w-16 h-16 rounded-full bg-[#0c1222] text-white flex items-center justify-center shadow-sm group-hover/video:bg-neon-cyan group-hover/video:scale-110 transition-all duration-300">
                   <Play size={28} className="fill-current ml-1" />
                 </div>
                 <div className="text-center">
-                  <p className="text-white font-orbitron font-bold text-xs uppercase tracking-widest group-hover/video:text-sky-400 transition-colors">Play Campus Stream</p>
-                  <p className="text-slate-400 font-mono text-[10px] mt-0.5">Media Source: COMING SOON</p>
+                  <p className="text-white font-orbitron font-bold text-xs uppercase tracking-widest group-hover/video:text-neon-cyan transition-colors">Play Campus Stream</p>
+                  <p className="text-text-muted font-mono text-[10px] mt-0.5">Media Source: COMING SOON</p>
                 </div>
               </div>
 
               {/* Corner tech indicators */}
-              <div className="absolute bottom-3 left-4 font-mono text-[9px] text-slate-500 flex items-center gap-1.5">
+              <div className="absolute bottom-3 left-4 font-mono text-[9px] text-text-muted flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 SYS_ONLINE
               </div>
-              <div className="absolute bottom-3 right-4 font-mono text-[9px] text-slate-500">
+              <div className="absolute bottom-3 right-4 font-mono text-[9px] text-text-muted">
                 1080P // STREAM
               </div>
             </div>
 
             {/* Additional info footer inside card */}
-            <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400 font-mono">
+            <div className="mt-5 pt-4 border-t border-black/6 flex items-center justify-between text-xs text-text-muted font-mono">
               <span>GMU DIGITAL LIFE</span>
               <span>EST. 2023</span>
             </div>
@@ -165,3 +165,4 @@ export default function HODMessage() {
     </section>
   );
 }
+

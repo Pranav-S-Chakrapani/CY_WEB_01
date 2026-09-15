@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Orbitron, Space_Grotesk } from "next/font/google";
+import { Orbitron, Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import PerspectiveGrid from "@/components/ui/PerspectiveGrid";
 import SmoothScroll from "@/components/providers/SmoothScroll";
@@ -8,11 +8,23 @@ import Footer from "@/components/layout/Footer";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-body"
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
 });
-const orbitron = Orbitron({ 
-  subsets: ["latin"], 
-  variable: "--font-orbitron" 
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-orbitron",
+});
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
+});
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -26,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${spaceGrotesk.variable} ${orbitron.variable} bg-cyber-black text-text-primary antialiased`}>
+    <html lang="en">
+      <body className={`${spaceGrotesk.variable} ${orbitron.variable} ${inter.variable} ${jetbrainsMono.variable} bg-cyber-black text-text-primary antialiased`}>
         <SmoothScroll>
           <div className="relative z-10">
             <Navbar />

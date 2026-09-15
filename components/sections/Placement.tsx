@@ -41,28 +41,28 @@ export default function Placement() {
                 <div className="relative h-40 w-40 shrink-0 rounded-full bg-gradient-to-tr from-blue-800 via-blue-500 to-cyan-400 p-[4px] shadow-[0_0_25px_rgba(59,130,246,0.3)] transition-all duration-500 group-hover:shadow-[0_0_35px_rgba(59,130,246,0.5)]">
                   <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white bg-white">
                     <img
-                      src="https://cy-iy.vercel.app/static/Rachana_faculty.jpeg"
-                      alt="Dr. Rachana P G"
+                      src="https://res.cloudinary.com/dkg60zkba/image/upload/v1774188001/faculty/nmr2zfqaftglonhpsiuy.jpg"
+                      alt="Dr. Aruna Kumar B T"
                       className="h-full w-full object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0"
                     />
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-orbitron text-xl font-bold text-slate-800">Dr. Rachana P G</h4>
+                  <h4 className="font-orbitron text-xl font-bold text-slate-800">Dr. Aruna Kumar B T</h4>
                   <p className="mt-1 font-mono text-xs font-bold uppercase tracking-widest text-sky-600">
-                    Placement & Internship Coordinator
+                    Associate Professor & Placement Officer
                   </p>
                 </div>
               </div>
               <div className="mt-6 space-y-2 border-t border-slate-100 pt-4 font-mono text-sm text-slate-600">
-                <p>Tel: +91 63606 01253</p>
-                <p>Email: rachanapg@gmit.ac.in</p>
+                <p>Tel: +91 99452 21208</p>
+                <p>Email: arunakumarbt@gmu.ac.in</p>
               </div>
             </div>
           </ScrollReveal>
         </div>
 
-        <ScrollReveal variant="scale" className="relative mt-12 rounded-t-3xl border-t border-white/5 bg-cyber-panel/20 py-16">
+        <ScrollReveal variant="scale" className="relative mt-12 rounded-t-3xl border-t border-black/6 bg-cyber-dark/40 py-16">
           <div className="mb-8 text-center">
             <h4 className="font-mono text-xs uppercase tracking-widest text-neon-cyan">
               Our Recruitment Partners
@@ -108,3 +108,4 @@ function StatItem({
     </div>
   );
 }
+

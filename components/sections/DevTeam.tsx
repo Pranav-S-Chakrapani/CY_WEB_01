@@ -91,11 +91,11 @@ export default function DevTeam() {
               transition={{ delay: i * 0.1 }}
               className="perspective-1000 group"
             >
-              <div className="relative p-8 bg-cyber-panel border border-white/5 rounded-3xl overflow-hidden text-center transition-all duration-500 group-hover:border-neon-cyan/50 shadow-2xl">
+              <div className="spotlight-card relative p-8 bg-white border border-black/8 rounded-2xl overflow-hidden text-center transition-all duration-300 hover:-translate-y-[3px] hover:border-black/16" onMouseMove={(e) => { const r = e.currentTarget.getBoundingClientRect(); e.currentTarget.style.setProperty(`--sx`, `${e.clientX - r.left}px`); e.currentTarget.style.setProperty(`--sy`, `${e.clientY - r.top}px`); }}>
                 
                 {/* Photo with Neon Ring */}
                 <div className="relative w-32 h-32 mx-auto mb-6">
-                  <div className={`absolute inset-0 rounded-full border-2 border-${dev.color} animate-spin-slow opacity-50 group-hover:opacity-100 transition-opacity shadow-[0_0_15px_#00f5ff]`} />
+                  <div className={`absolute inset-0 rounded-full border-2 border-${dev.color} animate-spin-slow opacity-50 group-hover:opacity-100 transition-opacity `} />
                   <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-cyber-black p-1">
                     <Image 
                       src={dev.photo} 
@@ -105,23 +105,23 @@ export default function DevTeam() {
                       className="object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-500" 
                     />
                     {/* Holographic Overlay on Hover */}
-                    <div className="absolute inset-0 bg-neon-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity mix-blend-overlay" />
+                    <div className="absolute inset-0 bg-neon-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                 </div>
 
                 <p className="font-orbitron font-bold text-lg text-text-primary mb-1">{dev.name}</p>
-                <div className="font-mono text-[10px] text-neon-cyan/60 mb-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="font-mono text-[10px] text-text-muted mb-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   {dev.id.replace("_", " ")}
                 </div>
                 
                 <div className="space-y-1">
                   <p className="font-share-tech text-xs uppercase tracking-widest text-text-muted">{dev.role}</p>
-                  <p className="font-mono text-[10px] text-neon-magenta/80">{dev.year}</p>
+                  <p className="font-mono text-[10px] text-neon-magenta">{dev.year}</p>
                 </div>
 
                 {/* Corner Accents */}
-                <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-neon-cyan/20 group-hover:border-neon-cyan transition-colors" />
-                <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-neon-magenta/20 group-hover:border-neon-magenta transition-colors" />
+                <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-black/8 group-hover:border-neon-cyan transition-colors" />
+                <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-black/8 group-hover:border-neon-magenta transition-colors" />
               </div>
             </motion.div>
           ))}
@@ -148,3 +148,4 @@ export default function DevTeam() {
     </section>
   );
 }
+

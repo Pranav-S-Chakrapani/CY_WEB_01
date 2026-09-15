@@ -7,7 +7,7 @@ import * as THREE from "three";
 
 export default function HeroScene() {
   return (
-    <div className="absolute inset-0 z-0 opacity-40">
+    <div className="absolute inset-0 z-0 opacity-60">
       <Canvas
         className="h-full w-full"
         dpr={[1, 1.25]}
@@ -15,9 +15,10 @@ export default function HeroScene() {
         performance={{ min: 0.7 }}
       >
         <PerspectiveCamera makeDefault position={[0, 0, 10]} />
-        <ambientLight intensity={1.5} />
-        <pointLight position={[10, 10, 10]} color="#0284c7" intensity={2} />
-        <pointLight position={[-10, -10, -10]} color="#4f46e5" intensity={1.5} />
+        <ambientLight intensity={0.8} />
+        {/* On-brand indigo + violet point lights at reduced intensity */}
+        <pointLight position={[10, 10, 10]}   color="#3654ff" intensity={1.0} />
+        <pointLight position={[-10, -10, -10]} color="#7b3fe4" intensity={0.7} />
         
         <Suspense fallback={null}>
           <group position={[3, 0, 0]}>
@@ -43,21 +44,21 @@ function Globe() {
   return (
     <mesh ref={meshRef}>
       <sphereGeometry args={[3, 32, 32]} />
-      <meshStandardMaterial 
-        color="#0284c7" 
-        wireframe 
-        transparent 
-        opacity={0.6} 
-        emissive="#0284c7" 
-        emissiveIntensity={0.2} 
+      <meshStandardMaterial
+        color="#3654ff"
+        wireframe
+        transparent
+        opacity={0.28}
+        emissive="#3654ff"
+        emissiveIntensity={0.08}
       />
-      {/* Internal Core */}
+      {/* Internal Core — near-white fill, barely visible on light bg */}
       <mesh scale={0.98}>
         <sphereGeometry args={[3, 32, 32]} />
-        <meshStandardMaterial 
-          color="#f1f5f9" 
-          transparent 
-          opacity={0.8} 
+        <meshStandardMaterial
+          color="#f8fafc"
+          transparent
+          opacity={0.5}
         />
       </mesh>
     </mesh>

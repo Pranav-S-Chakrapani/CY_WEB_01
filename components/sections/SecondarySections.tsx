@@ -46,7 +46,7 @@ export function DQAC() {
         </ScrollReveal>
 
         <ScrollReveal variant="right" tilt className="group relative flex h-full w-full flex-col items-center justify-center rounded-3xl border-2 border-amber-200/60 bg-gradient-to-b from-yellow-50 to-amber-100/50 p-8 text-center shadow-lg shadow-amber-900/5 transition-all duration-300 hover:border-amber-400 hover:shadow-[0_18px_50px_rgba(251,191,36,0.2)]">
-          <div className="relative mb-6 h-40 w-40 shrink-0 rounded-full bg-gradient-to-tr from-blue-800 via-blue-500 to-cyan-400 p-[4px] shadow-[0_0_25px_rgba(59,130,246,0.3)] transition-all duration-500 group-hover:shadow-[0_0_35px_rgba(59,130,246,0.5)]">
+          <div className="relative mb-6 h-40 w-40 shrink-0 rounded-full bg-[#eef1ff] p-[4px] transition-all duration-500">
             <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white bg-white">
               <img
                 src="https://cy-iy.vercel.app/static/pavan_faculty.png"
@@ -55,11 +55,11 @@ export function DQAC() {
               />
             </div>
           </div>
-          <h4 className="mb-2 font-orbitron text-xl font-bold text-slate-800 md:text-2xl">
+          <h4 className="mb-2 font-orbitron text-xl font-bold text-text-primary md:text-2xl">
             Mr. Pavan Kumar N T
           </h4>
-          <p className="mb-6 text-sm font-bold uppercase tracking-widest text-sky-600">DQAC Coordinator</p>
-          <div className="space-y-3 font-mono text-sm text-slate-600">
+          <p className="mb-6 text-sm font-bold uppercase tracking-widest text-neon-cyan">DQAC Coordinator</p>
+          <div className="space-y-3 font-mono text-sm text-text-muted">
             <div className="flex items-center justify-center gap-2">
               <Phone size={16} className="text-sky-500" /> +91 9113283741
             </div>
@@ -77,7 +77,7 @@ export function Research() {
   return (
     <SectionAtmosphere
       id="research"
-      className="border-y border-white/5 bg-blue-900/10 py-24 px-6 lg:px-24"
+      className="border-y border-black/6 bg-cyber-dark/60 py-24 px-6 lg:px-24"
       variant="magenta"
     >
       <div className="mx-auto max-w-7xl">
@@ -99,7 +99,7 @@ export function Research() {
           <ScrollReveal variant="left" tilt>
             <div className="group relative h-full overflow-hidden rounded-3xl border-2 border-amber-200/60 bg-gradient-to-b from-yellow-50 to-amber-100/50 p-8 shadow-lg shadow-amber-900/5 transition-all duration-300 hover:border-amber-400 hover:shadow-[0_18px_50px_rgba(251,191,36,0.2)]">
               <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="relative mb-6 h-40 w-40 shrink-0 rounded-full bg-gradient-to-tr from-blue-800 via-blue-500 to-cyan-400 p-[4px] shadow-[0_0_25px_rgba(59,130,246,0.3)] transition-all duration-500 group-hover:shadow-[0_0_35px_rgba(59,130,246,0.5)]">
+                <div className="relative mb-6 h-40 w-40 shrink-0 rounded-full bg-[#eef1ff] p-[4px] transition-all duration-500">
                   <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white bg-white">
                     <img
                       src="https://res.cloudinary.com/dkg60zkba/image/upload/v1774188001/faculty/nmr2zfqaftglonhpsiuy.jpg"
@@ -108,15 +108,15 @@ export function Research() {
                     />
                   </div>
                 </div>
-                <h4 className="mb-2 font-orbitron text-xl font-bold text-slate-800 md:text-2xl">
+                <h4 className="mb-2 font-orbitron text-xl font-bold text-text-primary md:text-2xl">
                   Dr. Aruna Kumar B T
                 </h4>
-                <p className="mb-6 font-share-tech text-sm font-bold uppercase tracking-widest text-sky-600 md:text-lg">
+                <p className="mb-6 font-share-tech text-sm font-bold uppercase tracking-widest text-neon-cyan md:text-lg">
                   Research Coordinator
                 </p>
-                <div className="space-y-2 font-mono text-[10px] text-slate-600 md:text-sm">
+                <div className="space-y-2 font-mono text-[10px] text-text-muted md:text-sm">
                   <p>Tel: +91 99452 21208</p>
-                  <p>Email: hod.cyiy@gmu.ac.in</p>
+                  <p>Email: arunakumarbt@gmu.ac.in</p>
                   <p className="mt-4 border-t border-slate-100 pt-4">
                     Focus: Advancing knowledge in cybersecurity
                   </p>
@@ -163,3 +163,5 @@ export function Research() {
     </SectionAtmosphere>
   );
 }
+
+

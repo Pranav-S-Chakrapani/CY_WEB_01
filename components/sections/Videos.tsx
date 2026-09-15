@@ -16,7 +16,7 @@ const featuredVideos: VideoItem[] = [
   {
     id: "hod-featured-video",
     title: "Dr. Aruna Kumar B T",
-    description: "Insights and featured presentation by the Head of Department, Dr. Aruna Kumar B T.",
+    description: "Insights and featured presentation by Associate Professor & Placement Officer, Dr. Aruna Kumar B T.",
     src: "/cyberweb/hod%20featured%20video.mp4",
   },
   {
@@ -37,7 +37,7 @@ export default function Videos() {
   const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
 
   return (
-    <section id="videos" className="py-24 px-6 lg:px-24 bg-cyber-dark/50 border-t border-white/5">
+    <section id="videos" className="py-24 px-6 lg:px-24 bg-cyber-dark/50 border-t border-black/6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-sm font-bold uppercase tracking-widest text-text-muted mb-3">Department Lectures</p>
@@ -196,3 +196,4 @@ export default function Videos() {
     </section>
   );
 }
+

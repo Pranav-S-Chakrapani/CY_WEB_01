@@ -36,7 +36,7 @@ export default function Admissions() {
             className="group relative flex flex-col justify-center overflow-hidden rounded-3xl border-2 border-amber-200/60 bg-gradient-to-b from-yellow-50 to-amber-100/50 p-8 shadow-lg shadow-amber-900/5 transition-all duration-300 hover:border-amber-400 hover:shadow-[0_18px_50px_rgba(251,191,36,0.2)]"
           >
             <div className="mb-8 flex flex-col items-center gap-6 text-center md:flex-row md:text-left">
-              <div className="relative h-40 w-40 shrink-0 rounded-full bg-gradient-to-tr from-blue-800 via-blue-500 to-cyan-400 p-[4px] shadow-[0_0_25px_rgba(59,130,246,0.3)] transition-all duration-500 group-hover:shadow-[0_0_35px_rgba(59,130,246,0.5)]">
+              <div className="relative h-40 w-40 shrink-0 rounded-full bg-gradient-to-tr from-blue-800 via-blue-500 to-cyan-400 p-[4px] transition-all duration-500">
                 <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white bg-white">
                   <img
                     src="https://cy-iy.vercel.app/static/pavan_faculty.png"
@@ -46,15 +46,15 @@ export default function Admissions() {
                 </div>
               </div>
               <div>
-                <h4 className="mb-1 font-orbitron text-xl font-bold text-slate-800">Mr. Pavan Kumar N T</h4>
+                <h4 className="mb-1 font-orbitron text-xl font-bold text-text-primary">Mr. Pavan Kumar N T</h4>
                 <p className="font-mono text-xs font-bold uppercase tracking-widest text-sky-600">
                   Admission Coordinator
                 </p>
-                <p className="mt-0.5 font-mono text-xs text-slate-500">Faculty Member, GM University</p>
+                <p className="mt-0.5 font-mono text-xs text-text-muted">Faculty Member, GM University</p>
               </div>
             </div>
 
-            <div className="flex flex-col items-center gap-4 border-t border-slate-100 pt-4 font-mono text-sm text-slate-600 md:items-start md:text-base">
+            <div className="flex flex-col items-center gap-4 border-t border-slate-100 pt-4 font-mono text-sm text-text-muted md:items-start md:text-base">
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-sky-500" />
                 <span>+91 9113283741</span>
@@ -78,7 +78,7 @@ export default function Admissions() {
             <p className="mb-4 font-mono text-xs font-bold uppercase tracking-widest text-sky-600">
               Scan for Admission Query
             </p>
-            <div className="relative h-44 w-44 overflow-hidden rounded-2xl border-4 border-white shadow-lg transition-all duration-500 group-hover:shadow-[0_0_25px_rgba(14,165,233,0.3)]">
+            <div className="relative h-44 w-44 overflow-hidden rounded-2xl border-4 border-white shadow-lg transition-all duration-500 ">
               <Image
                 src="/cyberweb/qr_admission.png"
                 alt="Admission Query QR Code"
@@ -86,7 +86,7 @@ export default function Admissions() {
                 className="object-contain"
               />
             </div>
-            <p className="mt-3 font-mono text-xs text-slate-500">Scan with your camera</p>
+            <p className="mt-3 font-mono text-xs text-text-muted">Scan with your camera</p>
           </motion.div>
 
           <motion.div
@@ -110,7 +110,7 @@ export default function Admissions() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative z-10 flex items-center gap-3 rounded-full bg-neon-cyan px-8 py-4 font-bold uppercase tracking-widest text-cyber-black shadow-[0_0_20px_rgba(2,132,199,0.3)] transition-all duration-300 hover:bg-white hover:shadow-[0_0_30px_rgba(2,132,199,0.5)]"
+              className="relative z-10 flex items-center gap-3 rounded-full bg-neon-cyan px-8 py-4 font-bold uppercase tracking-widest text-cyber-black shadow-sm transition-all duration-300 hover:bg-white hover:shadow-md"
             >
               <span>Apply Now</span>
               <ExternalLink size={20} />
@@ -119,7 +119,7 @@ export default function Admissions() {
             <div
               className="pointer-events-none absolute inset-0 opacity-[0.03]"
               style={{
-                backgroundImage: "radial-gradient(circle, #0284c7 1px, transparent 1px)",
+                backgroundImage: "radial-gradient(circle, #3654ff 1px, transparent 1px)",
                 backgroundSize: "20px 20px",
               }}
             />
@@ -129,3 +129,4 @@ export default function Admissions() {
     </SectionAtmosphere>
   );
 }
+
